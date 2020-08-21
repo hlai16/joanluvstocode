@@ -15,15 +15,12 @@ h2,
 h3,
 h4,
 h5,
-h6,
-small {
+h6 {
     font-family: 'Raleway Dots', cursive;
 }
 
 p, a {
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-decoration: none;
 }
 
 h1 {
@@ -34,12 +31,24 @@ h1 {
 
 h2 {
     color: #333;
-    font-size: 5rem;
+    font-size: 3.5rem;
 }
 
 h3 {
     color: #555;
     font-size: 2.5rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* GLOBAL */
@@ -55,6 +64,11 @@ body {
 
 .wrapper {
     max-width: 1400px;
+    margin: 0 auto;
+}
+.wrapper2 {
+    max-width: 1200px;
+    width: 95%;
     margin: 0 auto;
 }
 img {
@@ -80,11 +94,75 @@ img {
     color: rgb(189, 142, 149);
 }
 
+/* ABOUT ME */
+
+.about {
+    width: 75%;
+    background-color: #fff;
+    border-radius: 1.5%;
+    display: grid;
+    grid-template-columns: 65% 25%;
+    grid-gap: 3em;
+    box-shadow: 0 15px 55px #aaa;
+    text-align: left;
+    padding: 6rem;
+    margin: 6rem auto;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+}
+.about.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.about h2,
+.about p,
+.about nav{
+    grid-column: 1/2;
+}
+
+.aboutImg{
+    grid-column: 2/3;
+    grid-row: 1/4;
+    border-radius: 25%;
+    padding-top: 2rem;
+}
+ .about img {
+    border-radius: 50%; 
+ }
+
+ .socialMedia ul{
+    display: flex;
+    margin-left: -8%;
+ }
+ .socialMedia li {
+     margin: 1.5rem;
+     font-size: 2rem;
+ }
+    
 
 
 footer {
-    border-top: 5px rebeccapurple groove;
-    background-color: rgb(177, 141, 245);
     padding: 2rem 0;
 }
 
+/* MEDIA QUERIES */
+@media(max-width: 600px){
+    .about {
+        text-align: center;
+        width: 95%;
+        padding: 3rem;
+        margin: 2rem auto;
+        grid-template-columns: 100%;
+    }
+    .aboutImg{
+        grid-column: 1/2;
+        order: -1;
+        width: 80%;
+    }
+    .socialMedia {
+        align-items: center;
+    }
+}
