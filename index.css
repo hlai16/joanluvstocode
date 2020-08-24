@@ -39,8 +39,12 @@ h3 {
     font-size: 2.5rem;
 }
 
-p {
+h4 {
     font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
 }
 
 li {
@@ -68,7 +72,7 @@ body {
 }
 .wrapper2 {
     max-width: 1200px;
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
 }
 img {
@@ -106,7 +110,7 @@ img {
     box-shadow: 0 15px 55px #aaa;
     text-align: left;
     padding: 6rem;
-    margin: 6rem auto;
+    margin: 6rem auto 10rem auto;
     justify-content: space-between;
     opacity: 0;
     transform: translate(0, 10vh);
@@ -142,6 +146,71 @@ img {
      font-size: 2rem;
  }
     
+/* MY SERVICES */
+/* LAYOUT */
+.myServices{
+    margin: 45rem auto 6rem auto;
+}
+.myServicesLine{
+    margin-top: 0;
+}
+.myServices h2,
+.myServices p{
+    line-height: 2rem;
+}
+.myServicesGrid {
+    display: grid;
+    grid-template-columns: 30% repeat(3);
+    grid-gap: 1rem;
+}
+.cardFlip1,
+.cardFlip2,
+.cardFlip3{
+    grid-row: 1/2;
+}
+
+
+/* Flipping AnimationCSS */
+/* Credit to W3C School */
+.serviceCardFlip {
+    background-color: transparent;
+    width: 350px;
+    height: 250px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    margin-top: 6rem;
+  }
+  
+  .serviceCardFlipInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+  }
+  
+  .serviceCardFlip:hover .serviceCardFlipInner {
+    transform: rotateX(180deg);
+  }
+  
+  .cardFront, .cardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+    
+  .cardBack {
+    transform: rotateX(180deg);
+    background-color: rebeccapurple;
+    color: #fff;
+    padding: 2rem;
+  }
+  .cardBack h3{
+      color: #fff;
+  }
 
 
 footer {

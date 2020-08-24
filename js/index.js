@@ -7,6 +7,7 @@ $(document).ready(function () {
         interactive: true
     });
     scrollFadeIn();
+    
 });
 
 // credit to Staffan Adolfsson on CodePen, learn more about jqery while googling this code. I probably don't need animat.css now.
