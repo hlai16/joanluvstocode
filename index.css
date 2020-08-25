@@ -21,6 +21,7 @@ h6 {
 
 p, a {
     font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
 }
 
 h1 {
@@ -68,6 +69,7 @@ body {
 
 .wrapper {
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
 }
 .wrapper2 {
@@ -79,6 +81,7 @@ img {
     width: 100%;
     height: auto;
 }
+
 
 /* HEADER */
 
@@ -98,6 +101,48 @@ img {
     color: rgb(189, 142, 149);
 }
 
+/* NAVBAR */
+.icon {
+    display: none;
+}
+.mainNavBar ul,
+.mainNavBar{
+    display: flex;
+    justify-content: space-between;
+}
+.mainNavBar{
+    padding: 1rem 10rem;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 20;
+    opacity: 1;
+    transition: all 1s;
+}
+.hidden {
+    opacity: 0;
+}
+
+.mainNavBar p{
+    font-size: 2rem;
+}
+.mainNavBar li{
+    margin: 2rem;
+    text-transform: uppercase;  
+}
+.mainNavBar a{
+    color: #777;
+}
+
+.mainNavBar ul li a:active,
+.mainNavBar ul li a:focus-within,
+.mainNavBar ul li a:hover {
+    color: rgb(78, 2, 155);
+}
 /* ABOUT ME */
 
 .about {
@@ -110,7 +155,7 @@ img {
     box-shadow: 0 15px 55px #aaa;
     text-align: left;
     padding: 6rem;
-    margin: 6rem auto 10rem auto;
+    margin: calc(100vh - 500px) auto;
     justify-content: space-between;
     opacity: 0;
     transform: translate(0, 10vh);
@@ -145,11 +190,14 @@ img {
      margin: 1.5rem;
      font-size: 2rem;
  }
+
+ 
+
     
 /* MY SERVICES */
 /* LAYOUT */
 .myServices{
-    margin: 45rem auto 6rem auto;
+    margin: calc(100vh - 15%) auto;
 }
 .myServicesLine{
     margin-top: 0;
@@ -218,12 +266,104 @@ footer {
 }
 
 /* MEDIA QUERIES */
+@media(orientation:portrait) and (max-width: 1100px){
+    .rippleEffect {
+        height: 75vh;
+    }
+    .about {
+        margin: calc(100vh - 90%) auto;
+    }
+    .myServices {
+        margin: calc(100vh - 70%) auto;
+    }
+    .myServicesGrid {
+        justify-content: center;
+        max-width: 95%;
+        margin: 0 auto;
+     }
+    
+}
+
+@media(max-width: 900px){
+    /* HAMBURGER MENU */
+      
+      .forHamburger {
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .forHamburger .myLinks {
+        display: none;
+        text-align: right;
+        padding-top: 4rem;
+      }
+      .mainNavBar li{
+          margin: 1.25rem;
+      }
+      .show {
+          display: block;
+      }
+
+      
+      .forHamburger a {
+        color: #333;
+        padding: 14px 16px;
+        font-size: 17px;
+        display: block;
+      }
+      
+      .forHamburger a.icon {
+        display: block;
+        position: absolute;
+        right: 8rem;
+        top: 2rem;
+        color: rebeccapurple;
+      }
+      
+      .forHamburger a:hover {
+        color: rebeccapurple;
+      }
+      
+      
+      /* FLIP ANIMATE TO ONE COLUMN */
+    .cardFlip2{
+        grid-row: 2/3;
+    }
+    .cardFlip3{
+        grid-row: 3/4;
+    }
+}
+
+
+@media(orientation: landscape) and (max-width: 900px){
+    .rippleEffect{
+        height: 120vh;
+    }
+    h1 {
+        font-size: 7rem;
+    }
+    .about {
+        margin: calc(100vh - 50%) auto;
+    }
+    .myServicesGrid {
+        justify-content: center;
+        max-width: 95%;
+        margin: 0 auto;
+     }
+
+    .myServices {
+        margin: calc(100vh + 10%) auto;
+    }
+}
 @media(max-width: 600px){
+    h1 {
+        font-size: 5rem;
+    }
     .about {
         text-align: center;
-        width: 95%;
+        width: 90%;
         padding: 3rem;
-        margin: 2rem auto;
+        margin: calc(100vh - 60%) auto;
         grid-template-columns: 100%;
     }
     .aboutImg{
@@ -231,7 +371,28 @@ footer {
         order: -1;
         width: 80%;
     }
+
+    .aboutImg img {
+        width: 70%;
+    }
+    
     .socialMedia {
         align-items: center;
+    }
+    .myServices {
+        margin: calc(100vh + 70%) auto;
+    }
+    .myServicesGrid {
+        max-width: 75%;
+        margin: 0 auto;
+     }
+}
+
+@media(max-width: 500px){
+    .about {
+        margin: calc(100vh - 150%) auto;
+    }
+    .myServices {
+        margin: calc(100vh + 10%) auto;
     }
 }
