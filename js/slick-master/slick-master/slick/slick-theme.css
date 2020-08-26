@@ -39,7 +39,7 @@
     color: transparent;
     border: none;
     outline: none;
-    background: transparent;
+    background: rgb(128, 107, 155);
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -48,7 +48,7 @@
 {
     color: transparent;
     outline: none;
-    background: transparent;
+    background: rebeccapurple;
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
@@ -174,6 +174,7 @@
 .slick-dots li button:focus:before
 {
     opacity: 1;
+    color: rebeccapurple;
 }
 .slick-dots li button:before
 {

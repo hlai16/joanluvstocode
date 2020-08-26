@@ -111,7 +111,7 @@ img {
     justify-content: space-between;
 }
 .mainNavBar{
-    padding: 1rem 10rem;
+    padding: .25rem 10rem;
     border-bottom: 1px solid #ccc;
     background-color: #fff;
 }
@@ -322,6 +322,32 @@ img {
 }
 .skill:hover{
     box-shadow: 0 2px 22px rebeccapurple;
+}
+
+/* PORTFOLIO */
+#portfolio {
+    background-color: #fff;
+    padding: 5rem;
+}
+
+.myAssignments {
+    margin: 5rem auto;
+}
+.assignmentInfo{
+    background: transparent;
+    margin-top: 5rem;
+}
+
+.slideCover {
+    border: 5px solid #efffef;
+    color: #222;
+    box-shadow: 0 2px 10px #ccc;
+    padding: 5rem;
+}
+.slideCover:hover,
+.slideCover:active,
+.slideCover:focus{
+    box-shadow: 0 2px 10px rgba(67, 33, 100, 0.61);
 }
 
 footer {
