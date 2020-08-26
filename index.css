@@ -293,6 +293,37 @@ img {
     padding: .5rem 0 .5rem 1rem;
 }
 
+.skillH3{
+    text-align: left;
+    line-height: 10rem;
+}
+
+.skillsGoInHere{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 1rem;
+    justify-content: space-between;
+    padding: 5rem;
+}
+
+.skill i{
+    font-size: 12rem;
+    color: rebeccapurple;
+}
+
+.skill img{
+    width: 80%;
+}
+.skill {
+    padding: 2rem;
+    border-radius: 5%;
+    transition: .8s;
+}
+.skill:hover{
+    box-shadow: 0 2px 22px rebeccapurple;
+}
+
 footer {
     padding: 2rem 0;
 }
@@ -383,6 +414,13 @@ footer {
     .boxShadow {
         width: 80%;
     }
+    /* SKILLS */
+    .skillsGoInHere{
+        grid-template-columns: repeat(2, 50%);
+    }
+    .skill img{
+        width: 70%;
+    }
 }
 
 
@@ -440,13 +478,30 @@ footer {
 }
 
 @media(max-width: 500px){
+    .wrapper2 {
+        width: 98%;
+    }
     .about {
         margin: calc(100vh - 150%) auto;
+    }
+    .forHamburger .myLinks {
+        text-align: left;
+        margin-left: -450px;
     }
     .myServices {
         margin: calc(100vh + 10%) auto;
     }
     #education {
         margin: -50% auto 0;
+        padding: 1rem;
+    }
+     /* SKILLS */
+     .skillsGoInHere{
+        grid-template-columns: 100%;
+        width: 95%;
+        padding: 2rem;
+    }
+    .skill img{
+        width: 60%;
     }
 }
