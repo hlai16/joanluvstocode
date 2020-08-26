@@ -1,6 +1,6 @@
 assignmentInfoArray = [
     sortingHat = {
-        description: 'An app for Harry Potter fan to be sorted into one of the Hogwart houses. This app used the Harry Potter API.',
+        description: 'An app for Harry Potter fan to be sorted into one of the Hogwart houses. This app used the Harry Potter API. This app used jquery.',
         link: `https://hlai16.github.io/sortingHatCeremonyByJoanLai/`,
     },
     poster = {
@@ -8,11 +8,11 @@ assignmentInfoArray = [
         link: `img/condor-heroes.jpg`,
     },
     chart = {
-        description: 'An article on cultured meat written by me. I used js chart plugins to show some of the data mentioned in the article.',
+        description: 'An article on cultured meat written by me. I used js chart plugins to show some of the data mentioned in the article. The overall layout is from bootstraps.',
         link: `https://hlai16.github.io/culturedMeatEssay/`,
     },
     wideEye = {
-        description: 'A live wordpress site I created for a paralegal client.',
+        description: 'A live wordpress site I created for a paralegal client. Client chooses the colour theme. Logo is modified by me and at client\'s satisfaction',
         link: `https://wideeyeparalegal.com`,
     },
     moribus = {

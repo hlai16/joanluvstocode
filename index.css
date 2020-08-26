@@ -539,4 +539,12 @@ footer {
     .skill img{
         width: 60%;
     }
+    /* PORTFOLIO */
+    #portfolio {
+        padding: 1rem;
+    }
+    
+    .slideCover {
+        padding: 2rem;
+    }
 }
