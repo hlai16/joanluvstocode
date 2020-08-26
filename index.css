@@ -10,13 +10,14 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 /* FONT */
 
-h1,
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'Raleway Dots', cursive;
+    font-family: 'Raleway', sans-serif;
+    color: #987;
 }
 
 p, a {
@@ -25,6 +26,7 @@ p, a {
 }
 
 h1 {
+    font-family: 'Raleway Dots', cursive;
     font-size: 10rem;
     color: rgb(80, 61, 62);
     margin: 10rem auto;
@@ -81,7 +83,19 @@ img {
     width: 100%;
     height: auto;
 }
-
+.sectionLine{
+    margin-top: 0;
+}
+.sectionH2,
+.testB4h2{
+    line-height: 2rem;
+}
+.testB4h2 {
+    color: #777;
+}
+.sectionH2 {
+    color: #222;
+}
 
 /* HEADER */
 
@@ -197,13 +211,7 @@ img {
 .myServices{
     margin: calc(100vh - 15%) auto calc(100vh - 30%);
 }
-.myServicesLine{
-    margin-top: 0;
-}
-.myServices h2,
-.myServices p{
-    line-height: 2rem;
-}
+
 .myServicesGrid {
     display: grid;
     grid-template-columns: 30% repeat(3);
@@ -254,14 +262,15 @@ img {
     color: #fff;
     padding: 2rem;
   }
-  .cardBack h3{
+  .cardBack h3, 
+  .cardBack h4{
       color: #fff;
   }
 
 /* Education and Skills */
 #education {
     background-color: #efffef;
-    padding: 5rem;
+    padding: 5rem 5rem 20rem;
 }
 .myEducation {
     text-align: left;

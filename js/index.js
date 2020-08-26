@@ -9,7 +9,15 @@ assignmentInfoArray = [
     },
     chart = {
         description: 'An article on cultured meat written by me. I used js chart plugins to show some of the data mentioned in the article.',
-        link: `#`,
+        link: `https://hlai16.github.io/culturedMeatEssay/`,
+    },
+    wideEye = {
+        description: 'A live wordpress site I created for a paralegal client.',
+        link: `https://wideeyeparalegal.com`,
+    },
+    moribus = {
+        description: 'A react webpage that uses axios to load and filter the vegan makeups for clients to browse. Moribus also incorporated firebase to let clients posted their comments about the products',
+        link: `https://ethicalmkp.github.io/Moribus/`,
     },
 ]
 
@@ -118,6 +126,22 @@ joansOffice.slideHoverShowsInfo = () => {
             `<div class="slideCover animate__animated animate__pulse">
                 <p>${assignmentInfoArray[2].description}</p>
                 <p>Link: <a href="${assignmentInfoArray[2].link}">Click Here</a></p>
+                </div>`
+        )
+    })   
+    $('.slide4').on('click', () => {
+        $('.assignmentInfo').html(
+            `<div class="slideCover animate__animated animate__pulse">
+                <p>${assignmentInfoArray[3].description}</p>
+                <p>Link: <a href="${assignmentInfoArray[3].link}">Click Here</a></p>
+                </div>`
+        )
+    })   
+    $('.slide5').on('click', () => {
+        $('.assignmentInfo').html(
+            `<div class="slideCover animate__animated animate__pulse">
+                <p>${assignmentInfoArray[4].description}</p>
+                <p>Link: <a href="${assignmentInfoArray[4].link}">Click Here</a></p>
                 </div>`
         )
     })   
