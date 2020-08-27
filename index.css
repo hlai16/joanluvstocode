@@ -83,8 +83,18 @@ img {
     width: 100%;
     height: auto;
 }
+.headingText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .sectionLine{
-    margin-top: 0;
+    margin: 2rem auto;
+    background: radial-gradient(#aaa, transparent);
+    color: transparent;
+    text-align: center;
+    width: 15%;
+    height: 1px;
 }
 .sectionH2,
 .testB4h2{
@@ -214,7 +224,7 @@ img {
 
 .myServicesGrid {
     display: grid;
-    grid-template-columns: 30% repeat(3);
+    grid-template-columns: 28% repeat(3);
     grid-gap: 1rem;
 }
 .cardFlip1,
@@ -254,7 +264,11 @@ img {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+   left: 0;
+   border-color: transparent;
+   background-color: transparent;
   }
+  
     
   .cardBack {
     transform: rotateX(180deg);
@@ -269,8 +283,8 @@ img {
 
 /* Education and Skills */
 #education {
-    background-color: #efffef;
-    padding: 5rem 5rem 20rem;
+    background-color: #efffefc4;
+    padding: 5rem 5rem calc(100vh - 30%);
 }
 .myEducation {
     text-align: left;
@@ -336,7 +350,7 @@ img {
 /* PORTFOLIO */
 #portfolio {
     background-color: #fff;
-    padding: 5rem;
+    padding: 5rem 5rem calc(100vh - 30%);
 }
 
 .myAssignments {
@@ -348,7 +362,7 @@ img {
 }
 
 .slideCover {
-    border: 5px solid #efffef;
+    border: 5px solid #efffefc4;
     color: #222;
     box-shadow: 0 2px 10px #ccc;
     padding: 5rem;
@@ -358,9 +372,97 @@ img {
 .slideCover:focus{
     box-shadow: 0 2px 10px rgba(67, 33, 100, 0.61);
 }
+.slideCover a {
+    background-color: rebeccapurple;
+    color: #fff;
+    border-radius: 25%;
+    padding: .25rem 1rem;
+}
+
+.slideCover a:hover{
+    background-color: rgba(102, 51, 153, 0.26);
+    border: 1px solid #efffef;
+    color: #222;
+}
+
+/* CONTACT FORM */
+#contact{
+    background-color: #efffefc4;
+    padding: 5rem 5rem calc(100vh - 30%);
+}
+form {
+    display: grid;
+    grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem;
+}
+.username,
+.userEmail {
+    grid-row: 1/2;
+    width: 30vw;
+}
+.username{
+    grid-column: 1/2;
+}
+.userEmail{
+    grid-column: 2/3;
+}
+.subject{
+    grid-row: 2/3;
+}
+.userComment{
+    grid-row: 3/4;
+}
+.userComment,
+.subject{
+    grid-column: 1/3;
+    width: 61vw;
+}
+input,
+textarea,
+.send {
+    width: 100%;
+    border: 1px solid #fff;
+    border-style: 0 1px 2px #aaa;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.username,
+.userComment,
+.userEmail,
+.subject{
+    background-color: #fff;
+    border-radius: 3%;
+    border: 1px solid lavender;
+}
+
+input{
+    height: 8vh;
+}
+.send{
+    padding: 2rem;
+    background-color: rebeccapurple;
+    color: #fff;
+}
+.send:hover{
+    background: linear-gradient(rebeccapurple, rgba(160, 3, 63, 0.541));
+}
+.submit {
+    width: 25%;
+    grid-row: 4/5;
+    grid-column: 1/3;
+    background-color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 5px 5px #fff;
+}
+
+/* FOOTER */
 
 footer {
-    padding: 2rem 0;
+    padding: 5rem 0;
+    color: #555;
 }
 
 /* MEDIA QUERIES */
@@ -384,6 +486,15 @@ footer {
      }
      .highlight {
         width: calc(40vw - 70%);
+    }
+    #education {
+        padding: 5rem 5rem calc(100vh - 100%);
+    }
+    #portfolio {
+        padding: 5rem 5rem calc(100vh - 100%);
+    }
+    #contact {
+        padding: 5rem 5rem calc(100vh - 100%);
     }
 }
 
@@ -456,6 +567,26 @@ footer {
     .skill img{
         width: 70%;
     }
+    /* CONTACT FORM */
+    .userEmail{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .subject{
+        grid-row: 3/4;
+    }
+    .userComment{
+        grid-row: 4/5;
+    }
+    .submit{
+        grid-row: 5/6;
+    }
+    .username,
+    .userEmail,
+    .subject,
+    .userComment {
+    width: 70vw;
+}
 }
 
 
@@ -478,6 +609,16 @@ footer {
     .myServices {
         margin: calc(100vh - 5%) auto calc(100vh - 45%);
     }
+    
+    input {
+        height: 12vh;
+    }
+    #education,
+    #portfolio,
+    #contact {
+        padding: 5rem 5rem calc(100vh - 45%);
+    }
+    
 }
 @media(max-width: 600px){
     h1 {
@@ -504,7 +645,7 @@ footer {
         align-items: center;
     }
     .myServices {
-        margin: calc(100vh + 70%) auto -50%;
+        margin: calc(100vh + 70%) auto calc(100vh - 50%);
     }
     .myServicesGrid {
         max-width: 75%;
@@ -516,6 +657,9 @@ footer {
     .wrapper2 {
         width: 98%;
     }
+    .sectionLine {
+        width: 25%;
+    }
     .about {
         margin: calc(100vh - 150%) auto;
     }
@@ -524,11 +668,10 @@ footer {
         margin-left: -450px;
     }
     .myServices {
-        margin: calc(100vh + 10%) auto;
+        margin: calc(100vh + 10%) auto 0;
     }
     #education {
-        margin: -50% auto 0;
-        padding: 1rem;
+        margin: calc(100vh - 100%) auto 0;
     }
      /* SKILLS */
      .skillsGoInHere{
@@ -540,11 +683,28 @@ footer {
         width: 60%;
     }
     /* PORTFOLIO */
-    #portfolio {
-        padding: 1rem;
-    }
     
     .slideCover {
         padding: 2rem;
+    }
+    /* CONTACT */
+    
+    form {
+        padding: 1rem;
+    }
+    .submit {
+        width: 35%;
+    }
+    input,
+    textarea{
+        width: 90%;
+    }
+    #education,
+    #portfolio,
+    #contact {
+        padding: 5rem 1rem calc(100vh - 105%);
+    }
+    footer {
+        width: 95%;
     }
 }

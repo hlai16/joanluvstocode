@@ -1,11 +1,11 @@
 assignmentInfoArray = [
-    sortingHat = {
-        description: 'An app for Harry Potter fan to be sorted into one of the Hogwart houses. This app used the Harry Potter API. This app used jquery.',
-        link: `https://hlai16.github.io/sortingHatCeremonyByJoanLai/`,
-    },
     poster = {
         description: 'A movie poster created using photoshop',
         link: `img/condor-heroes.jpg`,
+    },
+    sortingHat = {
+        description: 'An app for Harry Potter fan to be sorted into one of the Hogwart houses. This app used the Harry Potter API. This app used jquery.',
+        link: `https://hlai16.github.io/sortingHatCeremonyByJoanLai/`,
     },
     chart = {
         description: 'An article on cultured meat written by me. I used js chart plugins to show some of the data mentioned in the article. The overall layout is from bootstraps.',
@@ -100,11 +100,11 @@ joansOffice.slick = $(document).ready(function () {
         pauseOnDotsHover: false,
         respondTo: 'mobile',
         speed: 1000,
-        zIndex: 10
+        zIndex: 1000
     });
 });
 
-joansOffice.slideHoverShowsInfo = () => {
+joansOffice.slideClickShowsInfo = () => {
     $('.slide1').on('click', () => {
         $('.assignmentInfo').html(
             `<div class="slideCover animate__animated animate__pulse">
@@ -151,7 +151,7 @@ joansOffice.slideHoverShowsInfo = () => {
 
 joansOffice.init = () => {
     joansOffice.hamburgerOn();
-    joansOffice.slideHoverShowsInfo();
+    joansOffice.slideClickShowsInfo();
 }
 
 //doc ready
