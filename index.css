@@ -296,13 +296,21 @@ img {
 }
 .boxShadow{
     width: calc(100vw - 20%);
-    background-color: #eee;
+    background: transparent;
     margin: 2rem;
+    position: sticky;
 }
 .educationBox {
     height: 98%;
     background-color: #fff;
     padding: 2rem;
+    position: relative;
+    top: 5px;
+    transition: .8s;
+}
+.educationBox:hover,
+.educationBox:focus{
+    top: 0;
 }
 .boxShadow:hover,
 .boxShadow:focus {
@@ -333,19 +341,41 @@ img {
 .skill i{
     font-size: 12rem;
     color: rebeccapurple;
+    position: relative;
+    top: 10px;
+    transition: .5s;
+}
+.checked{
+    position: absolute;
+    left: 10rem;
+    top: 5rem;
+    font-size: 5rem;
+    color: transparent;
+}
+.checked:hover{
+   color: rgba(0, 0, 0, 0.651);
 }
 
 .skill img{
     width: 80%;
+    position: relative;
+    top: 10px;
+    transition: .2s;
+}
+.skill i:hover,
+.skill i:active,
+.skill i:focus,
+.skill img:hover,
+.skill img:active,
+.skill img:focus{
+    top: 0;
 }
 .skill {
     padding: 2rem;
-    border-radius: 5%;
-    transition: .8s;
+    position: sticky;
 }
-.skill:hover{
-    box-shadow: 0 2px 22px rebeccapurple;
-}
+
+
 
 /* PORTFOLIO */
 #portfolio {
